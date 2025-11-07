@@ -22,6 +22,33 @@ async function getCards()
             imgDiv.style.backgroundImage = `url(${jeu.background_image})`;
             carte.className = `carte w-11/12 flex flex-col items-center justify-center min-h-[600px] rounded-lg border-white border-2 bg-gradient-to-b from-[#0D1137] to-[#020D71]`;
             const textDiv = document.createElement("div");
+            textDiv.innerHTML = `
+            <div class="titre">
+            <div class="flex justify-center items-center">
+            <h1 class="text-xl">Sekiro: Shadows Die Twice</h1></div>
+            <img src="" alt="">
+            </div>
+            <hr>
+            <div class="date flex justify-between">
+                <h4 class="text-white opacity-75">date de sortie</h4>
+                <h4>${jeu.released}</h4>
+            </div>
+            <hr>
+            <div class="date flex justify-between">
+                <h4 class="text-white opacity-75">genre</h4>
+                <h4>${jeu.genres.map(genre => genre.name)}</h4>
+            </div>
+            <hr>
+            <div class="date flex justify-between">
+                <h4 class="text-white opacity-75">platforme</h4>
+                <h4 class=" w-[40%]" >${jeu.platforms.map(p => p.platform.name)}</h4>
+            </div>
+            <hr>
+            <div class="date flex justify-between">
+                <h4 class="text-white opacity-75">note</h4>
+                <h4>${jeu.rating}</h4>
+            </div>
+            `;
             textDiv.className = `h-1/2 w-11/12 text-white flex flex-col gap-[20px] m-[30px]`;
             carte.appendChild(imgDiv);
             carte.appendChild(textDiv);
