@@ -11,7 +11,7 @@ async function getCards()
         const reponse = await fetch(lien);
         if (!reponse.ok) throw new Error("Erreur lors du fetch");
         const data = await reponse.json();
-        jeux = data.results.slice(0,1);
+        jeux = data.results.slice(0,64);
         // console.log(cartes.results.slice(0,2));
         // name, released, background_image, rating, genres, platforms 
         jeux.forEach((jeu) => {
@@ -20,13 +20,13 @@ async function getCards()
             const imgDiv = document.createElement("div");
             imgDiv.className = `h-[250px] w-10/12 bg-cover bg-no-repeat bg-center rounded-lg border-2 border-white mt-[20px]`;
             imgDiv.style.backgroundImage = `url(${jeu.background_image})`;
-            carte.className = `carte w-11/12 flex flex-col items-center justify-center min-h-[600px] rounded-lg border-white border-2 bg-gradient-to-b from-[#0D1137] to-[#020D71]`;
+            carte.className = `carte w-11/12 flex flex-col items-center justify-center min-h-[600px] rounded-lg border-white border-2 bg-gradient-to-b from-[#0D1137] to-[#030B5D]`;
             const textDiv = document.createElement("div");
             textDiv.innerHTML = `
-            <div class="titre">
+            <div class="titre flex justify-between ml-[30px]">
             <div class="flex justify-center items-center">
             <h1 class="text-xl">Sekiro: Shadows Die Twice</h1></div>
-            <img src="" alt="">
+            <div><img src="img/Star Filled.png" alt=""></div>
             </div>
             <hr>
             <div class="date flex justify-between">
