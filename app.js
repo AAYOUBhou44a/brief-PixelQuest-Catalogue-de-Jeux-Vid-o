@@ -11,7 +11,7 @@ async function getCards()
         const reponse = await fetch(lien);
         if (!reponse.ok) throw new Error("Erreur lors du fetch");
         const data = await reponse.json();
-        jeux = data.results.slice(0,64);
+        jeux = data.results.slice(0,1);
         // console.log(cartes.results.slice(0,2));
         // name, released, background_image, rating, genres, platforms 
         jeux.forEach((jeu) => {
