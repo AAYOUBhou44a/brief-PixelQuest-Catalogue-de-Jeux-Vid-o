@@ -7,45 +7,55 @@
     <script src="app.js" defer></script>
     <title>Document</title>
 </head>
-<body class="min-h-screen w-screen flex flex-col items-center justify-center bg-[#0D1137]">
+<body class="min-h-screen  flex flex-col items-center justify-center bg-[#0D1137]">
+
     <nav class="text-white w-full flex justify-between items-center bg-[#0D1137] relative">
-    <img src="img/image 1.png" alt="">
+    <img class="" src="img/image 1 (1).png" alt="">
     <input
         type="text"
         placeholder="Search"
-        class=" h-8 rounded-xl bg-[#212972] w-[200px] pl-10 pr-2 bg-no-repeat bg-left bg-contain"
+        class=" h-8 rounded-xl bg-[#212972] w-[220px] pl-10 pr-2 bg-no-repeat bg-left bg-contain md:w-[500px] lg:w-[1000px] md:h-[45px]"
         style="background-image: url('img/Search.png'); background-size: 27px;"
     />
-        <div class="burgerMenu"><img src="img/burger menu.png" alt=""></div>
+        <div class="burgerMenu md:hidden "><img src="img/burger menu.png" alt=""></div>
+        <div class="sidebar hidden md:block md:flex gap-[10px] lg:gap-[20px]">
+        <img src="img/Down Button.png" alt="">
+        <img src="img/Alphabetical Sorting 2.png" alt="">
+        <img src="img/Bookmark.png" alt="">
+        </div>
     </nav>
     </div>
-    <div class="accueil m-[30px]">
-        <h1 class="text-2xl text-white">Explorer des dizaines de jeux vidéo sur une seule plateforme.</h1>
+
+    <div class="accueil m-[30px] w-full flex flex-col items-center justify-center gap-[20px]">
+        <h1 class="text-2xl md:text-3xl text-white">Explorer des dizaines de jeux vidéo sur une seule plateforme.</h1>
         <h3 class="text-white opacity-75">Explorer des dizaines de jeux vidéo sur une seule plateforme.</h3>
     </div>
-    <main class="w-full flex flex-col items-center justify-center gap-[40px] bg-[#0D1137]">
+
+    <main class="w-full flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-[40px] bg-[#0D1137] text-sm">
 
     </main>
+
     <div class="voirPlus flex justify-center items-center gap-[15px] m-[30px]">
         <img src="img/Forward Button.png" alt="">
         <h1 class="text-white text-[20px]">voir plus</h1>
     </div>
+
     <footer class="bg-[#131849] w-full p-[5px] m-[10px]" >
         <div class="footer1 flex justify-between w-full">
             <img src="img/image 1 (1).png" alt="">
-            <div class="followsUs flex flex-col justify-around items-center">
-                <h1 class="text-[#FBAC2E]">follows us</h1>
-                <div class="socilaMedia flex gap-[10px]">
-                    <img src="img/Facebook F.png" alt="">
-                    <img src="img/YouTube Logo.png" alt="">
-                    <img src="img/X (1).png" alt="">
-                    <img src="img/Pinterest.png" alt="">
-                    <img src="img/LinkedIn (3).png" alt="">
-                    <img src="img/Discord New.png" alt="">
+            <div class="followsUs flex flex-col justify-around md:justify-between items-center">
+                <h1 class="text-[#FBAC2E] md:text-xl">follows us</h1>
+                <div class="min-w-[100px] socilaMedia flex gap-[10px]">
+                    <img class="md:h-[30px] md:w-[30px] h-[15px] w-[15px]" src="img/Facebook F (1).png" alt="">
+                    <img class="md:h-[30px] md:w-[30px] h-[15px] w-[15px]" src="img/YouTube Logo (1).png" alt="">
+                    <img class="md:h-[30px] md:w-[30px] h-[15px] w-[15px]" src="img/X (2).png" alt="">
+                    <img class="md:h-[30px] md:w-[30px] h-[15px] w-[15px]" src="img/Pinterest (1).png" alt="">
+                    <img class="md:h-[30px] md:w-[30px] h-[15px] w-[15px]" src="img/LinkedIn (4).png" alt="">
+                    <img class="md:h-[30px] md:w-[30px] h-[15px] w-[15px]" src="img/Discord New (1).png" alt="">
                 </div>
             </div>
         </div>
-        <div class="w-full flex justify-center"><h5 class="text-white text-xs">PixelQuest@ 2025 All rights reserved.</h5></div>
+        <div class="w-full flex justify-center"><h5 class="text-white text-xs md:text-lg">PixelQuest@ 2025 All rights reserved.</h5></div>
     </footer>
 </body>
 </html>

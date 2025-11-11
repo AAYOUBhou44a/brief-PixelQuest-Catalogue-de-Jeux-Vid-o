@@ -40,7 +40,7 @@ function displayPage(pageActuelle){
             imageFavorite.className = "absolute top-[10px] left-[10px] h-[35px] text-yellow-400";
             imgDiv.appendChild(imageFavorite);
 
-            carte.className = `carte w-11/12 flex flex-col items-center justify-center min-h-[600px] rounded-lg border-white border-2 bg-gradient-to-b from-[#0D1137] to-[#030B5D]`;
+            carte.className = `hover:scale-105 transition-transform duration-1000 text-sm carte w-11/12 md:w-[43%] lg:w-[30%] flex flex-col items-center justify-center min-h-[500px] rounded-lg border-white border-2 bg-gradient-to-b from-[#0D1137] to-[#030B5D]`;
 
             const textDiv = document.createElement("div");
             textDiv.innerHTML = `
@@ -61,7 +61,7 @@ function displayPage(pageActuelle){
                 </div>
                 <hr>
                 <div class="date flex justify-between">
-                    <h4 class="text-white opacity-75">platforme</h4>
+                    <h4 class="text-white opacity-75 pr-[8px]">platforme</h4>
                     <h4>${jeu.platforms.map(p => p.platform.name).join(", ")}</h4>
                 </div>
                 <hr>
@@ -70,7 +70,7 @@ function displayPage(pageActuelle){
                     <h4>${jeu.rating}</h4>
                 </div>
             `;
-            textDiv.className = `h-1/2 w-11/12 text-white flex flex-col gap-[20px] m-[30px]`;
+            textDiv.className = `h-1/2 w-11/12  md:text-sm text-white flex flex-col gap-[10px] m-[30px]`;
 
             carte.appendChild(imgDiv);
             carte.appendChild(textDiv);
