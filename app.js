@@ -1,7 +1,7 @@
 const main = document.querySelector("main");
 const voirPlus = document.querySelector(".voirPlus");
 const lien = "https://api.rawg.io/api/games?key=b1e47857f0c347f69a38b38626d82d65";
-
+const burgerMenu = document.querySelector(".burgerMenu");
 let toutJeux = [];
 let debut = 0;
 const jeuxParPage = 12;
@@ -95,3 +95,13 @@ voirPlus.addEventListener("click", () => {
         displayPage(pageActuelle);
     }
 });
+
+burgerMenu.addEventListener("click", function(){
+    burgerMenu.innerHTML = `
+        <div class=" fixed top-0 right-0 h-[180px] w-[70%] flex flex-col items-center text-white bg-[#0D1137] justify-evenly z-50 pt-[10px] pb-[10px]">
+        <div class="w-full flex items-center justify-center pb-[20px] border-b border-white"><a href="">Explorer les jeux</a></div>
+        <div class="w-full flex items-center justify-center pb-[20px] border-b border-white"><a href="">Gérer mes favoris</a></div>
+        <div class="w-full flex items-center justify-center pb-[20px]  "><a href="">Filtrer les jeux</a></div>
+        </div>
+    `
+})
