@@ -133,7 +133,19 @@ filtrageImg.addEventListener("click", ()=> {
     filtrageImg.classList.toggle("hidden");
 })
 
-
+triSelect.addEventListener("change", ()=>{
+    const valeur = triSelect.value;
+    if(valeur === "genre"){
+        toutJeux.sort((jeu1, jeu2)=> jeu1.genres[0].name.localeCompare(jeu2.genres[0].name));
+    }
+    else if(valeur === "platforme"){
+        toutJeux.sort((jeu1, jeu2) => jeu1.platforms[0].name.localeCompare(jeu2.platforms[0].name))
+    }
+    else{
+        toutJeux.sort((jeu1, jeu2) => jeu2.rating - jeu1.rating);
+    }
+    displayPage(pageActuelle);
+})
 //  genre, plateforme ou note. 
 
 goDown.addEventListener("click", ()=>{
