@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="app.js" defer></script>
+        <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <title>Document</title>
 </head>
 <body class="min-h-screen  flex flex-col items-center justify-center bg-[#0D1137]">
@@ -17,16 +22,22 @@
         class="search h-8 rounded-xl bg-[#212972] w-[220px] pl-10 pr-2 bg-no-repeat bg-left bg-contain md:w-[500px] lg:w-[1000px] md:h-[45px]"
         style="background-image: url('img/Search.png'); background-size: 27px;"
     />
-        <div class="burgerMenu md:hidden "><img src="img/burger menu.png" alt=""></div>
+    <img class="filtrageImg h-[30px] ml-[50px] cursor-pointer md:hidden lg:hidden" src="img/Alphabetical Sorting 2.png" alt="">
+            <select class="triSelect bg-[#0D1137] hidden">
+        <option value="genre">genre</option>
+        <option value="plateforme">plateforme</option>
+        <option value="note">note</option>
+    </select>
+        <div class="burgerMenu md:hidden cursor-pointer"><img src="img/burger menu.png" alt=""></div>
         <div class="sidebar hidden md:block md:flex gap-[10px] lg:gap-[20px]">
-        <img class="goDown" src="img/Down Button.png" alt="">
+        <img class="goDown cursor-pointer" src="img/Down Button.png" alt="">
         <img class="filtrageImg cursor-pointer" src="img/Alphabetical Sorting 2.png" alt="">
         <select class="triSelect bg-[#0D1137] hidden">
             <option value="genre">genre</option>
             <option value="plateforme">plateforme</option>
             <option value="note">note</option>
         </select>
-        <img src="img/Bookmark.png" alt="">
+        <img class="goToFavoris cursor-pointer" src="img/Bookmark.png" alt="">
         </div>
     </nav>
     </div>
@@ -36,13 +47,16 @@
         <h3 class="text-white opacity-75">Explorer des dizaines de jeux vidéo sur une seule plateforme.</h3>
     </div>
 
+    <div id="loader" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-[#0D1137] z-50 hidden">
+    <div class="w-16 h-16 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+</div>
     <main class="w-full flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-[40px] bg-[#0D1137] text-sm">
 
     </main>
 
     <div class="voirPlus flex justify-center items-center gap-[15px] m-[30px]">
-        <img src="img/Forward Button.png" alt="">
-        <h1 class="text-white text-[20px]">voir plus</h1>
+        <img class="cursor-pointer" src="img/Forward Button.png" alt="">
+        <h1 class="text-white text-[20px] cursor-pointer">voir plus</h1>
     </div>
 
     <footer class="bg-[#131849] w-full p-[5px] m-[10px]" >
