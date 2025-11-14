@@ -4,7 +4,6 @@ let favoris = JSON.parse(localStorage.getItem("favoris")) || [];
 
 if(favoris.length === 0){
     main.innerText = "aucun jeux dans les favoris";
-    return;
 }
 
 favoris.forEach(jeu => {
